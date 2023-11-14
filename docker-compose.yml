@@ -1,0 +1,12 @@
+version: "1.0"
+
+services:
+ sonarqube:
+  container_name: sonarqube
+  image: sonarqube:8.9-community
+  volumes:
+   - C:\Workspace\Docker\Practicas\DockerSonarQube-example\storage\data:/opt/sonarqube/data
+   - C:\Workspace\Docker\Practicas\DockerSonarQube-example\storage\logs:/opt/sonarqube/logs
+   - C:\Workspace\Docker\Practicas\DockerSonarQube-example\storage\extensions:/opt/sonarqube/extensions
+  ports:
+   - 9000:9000
